@@ -45,5 +45,10 @@ class LinkedList(Node):
         else:
             previous_node.set_next(current_node.get_next())
 
+    # TODO: Add append
+    # TODO: Add insert
+    # TODO: Add index
+    # TODO: Add pop
+
     def __repr__(self):
         return (self.data, self.next, self.head)
