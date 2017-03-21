@@ -1,9 +1,9 @@
 def k_means(centroids, data_points):
     distances = [data_points[:] for x in range(len(centroids))]
+    print("Data points: {0}".format(data_points))
 
-    # Try 10 iterations
     # TODO: Stop at conergence
-    for i in range(10):
+    while True:
         # Compute distances
         distances = compute_distances(centroids, distances)
 
@@ -12,8 +12,23 @@ def k_means(centroids, data_points):
         assigned_points = assign_points(assigned_points, distances)
 
         # Recompute centroids
+        print("Recomputing centroids...")
+        prev_centroids = centroids[:]
+        #print("prev_centroids: {0}".format(prev_centroids))
         centroids = compute_centroids(centroids, assigned_points, data_points)
-        print(centroids)
+        #print("centroids: {0}".format(centroids))
+        print(assigned_points)
+        for i, item in enumerate(centroids):
+            print("Centroid {0}".format(item))
+            #print("Distances to points: {0}".format(i))
+            print("Points closest: {0}".format(assigned_points[i]))
+        print("...")
+
+        if set(prev_centroids) == set(centroids):
+            print("Converging on: {0}".format(centroids))
+
+            break
+
 
 def compute_centroids(centroids, assigned_points, data_points):
     for i, centroid in enumerate(centroids):
@@ -51,6 +66,7 @@ def read_data(filename):
 def main():
     # Initial centroids
     centroids = [4, 5, 8]
+    print("Initial centroids: {0}".format(centroids))
     data_points = read_data("data.txt")
     k_means(centroids, data_points)
 
