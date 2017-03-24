@@ -19,17 +19,3 @@ class Deque:
 
     def size(self):
         return len(self.items)
-
-# Test output
-d = Deque()
-print(d.is_empty())
-d.add_rear(4)
-d.add_rear("dog")
-d.add_front("cat")
-d.add_front(True)
-print(d.size())
-print(d.is_empty())
-d.add_rear(8.4)
-print(d.items)
-print(d.remove_rear())
-print(d.remove_front())
