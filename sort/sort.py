@@ -1,4 +1,13 @@
 def bubble_sort(data):
+    """The generic bad algorithm"""
+    data_length = len(data)
+    for pass_num in range(data_length - 1, 0, -1):
+        for i in range(pass_num):
+            if data[i] > data[i+1]:
+                data[i], data[i+1] = data[i+1], data[i]
+
+def short_bubble_short(data):
+    """Skips elements when they are already sorted"""
     data_length = len(data)
     while True:
         swapped = False
@@ -14,5 +23,5 @@ bubble_sort(unsorted_list)
 print(unsorted_list)
 
 almost_sorted_list = [20,30,40,90,50,60,70,80,100,110]
-#short_bubble_short(almost_sorted_list)
-#print(almost_sorted_list)
+short_bubble_short(almost_sorted_list)
+print(almost_sorted_list)
