@@ -31,22 +31,22 @@ class Node:
                 return self.right.contains(val)
 
     def print_in_order(self):
-        if self.left is not None:
+        if self.left:
             self.left.print_in_order()
         print(self.data)
-        if self.right is not None:
+        if self.right:
             self.right.print_in_order()
 
     def print_pre_order(self):
         print(self.data)
-        if self.left is not None:
+        if self.left:
             self.left.print_pre_order()
-        if self.right is not None:
+        if self.right:
             self.right.print_pre_order()
 
     def print_post_order(self):
-        if self.left is not None:
+        if self.left:
             self.left.print_post_order()
-        if self.right is not None:
+        if self.right:
             self.right.print_post_order()
         print(self.data)
