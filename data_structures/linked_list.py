@@ -15,7 +15,7 @@ class LinkedList(Node):
     def size(self):
         current_node = self.head
         count = 0
-        while current_node != None:
+        while current_node:
             count += 1
             current_node = current_node.get_next()
         return count
@@ -23,7 +23,7 @@ class LinkedList(Node):
     def search(self, item):
         current_node = self.head
         found_node = False
-        while  current_node != None and not found_node:
+        while current_node and not found_node:
             if current_node.get_data() == item:
                 found_node = True
             else:
@@ -40,7 +40,7 @@ class LinkedList(Node):
             else:
                 previous_node = current_node
                 current_node = current_node.get_next()
-        if previous_node == None:
+        if not previous_node:
             self.head = current_node.get_next()
         else:
             previous_node.set_next(current_node.get_next())

@@ -6,12 +6,12 @@ class Node:
 
     def insert(self, val):
         if val <= self.data:
-            if self.left is None:
+            if not self.left:
                 self.left = Node(val)
             else:
                 self.left.insert(val)
         else:
-            if self.right is None:
+            if not self.right:
                 self.right = Node(val)
             else:
                 self.right.insert(val)
@@ -20,12 +20,12 @@ class Node:
         if val == self.data:
             return True
         elif val < self.data:
-            if self.left is None:
+            if not self.left:
                 return False
             else:
                 return self.left.contains(val)
         else:
-            if self.right is None:
+            if not self.right:
                 return False
             else:
                 return self.right.contains(val)
@@ -50,4 +50,3 @@ class Node:
         if self.right is not None:
             self.right.print_post_order()
         print(self.data)
-
