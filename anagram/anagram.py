@@ -22,7 +22,7 @@ def parse_lookup_words(filename):
     return words_lookup
 
 def main():
-    start = time.time()
+    start_time = time.time()
     word_anagrams = parse_dictionary("vocabulary.txt")
     words_lookup = parse_lookup_words("test_words.txt")
 
@@ -35,8 +35,8 @@ def main():
         if len(words) > 1:
             print(', '.join(words))
 
-    end = time.time()
-    print(end - start)
+    end_time = time.time()
+    print(end_time - start_time)
 
 if __name__ == "__main__":
     main()
