@@ -16,3 +16,7 @@ def palindrome(text_string):
             still_equal = False
 
     return still_equal
+
+
+def palindrome2(text_string):
+    return text_string == text_string[::-1]
