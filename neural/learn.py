@@ -3,9 +3,6 @@ from _operator import or_
 from _operator import and_
 
 
-__author__ = 'estensen'
-
-
 def run(op):
     p = Perceptron(2)
     alpha = 0.1

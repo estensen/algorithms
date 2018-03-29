@@ -3,8 +3,6 @@ from pybrain.tools.shortcuts import buildNetwork
 from pybrain.structure import TanhLayer
 from pybrain.supervised.trainers import BackpropTrainer
 
-__author__ = 'estensen'
-
 
 def main():
     ds = SupervisedDataSet(1, 1)  # (num_input_neurons, num_output_neurons)

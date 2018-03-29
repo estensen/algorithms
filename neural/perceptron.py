@@ -2,8 +2,6 @@ from random import uniform
 from operator import add
 from operator import mul
 
-__author__ = 'estensen'
-
 
 class Perceptron:
     def __init__(self, num_inputs):

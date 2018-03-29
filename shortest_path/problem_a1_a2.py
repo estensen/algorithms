@@ -1,9 +1,6 @@
 from a_star import a_star
 
 
-__author__ = 'estensen'
-
-
 def solve(file):
     # Read board
     with open(file) as f:

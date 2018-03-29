@@ -1,7 +1,5 @@
 from a_star import Node
 
-__author__ = 'estensen'
-
 
 def manhattan(node1, goal):
     return abs(node1.x - goal.x) + abs(node1.y - goal.y)

@@ -2,7 +2,6 @@ from a_star import a_star
 from bfs import bfs
 from dijkstra import dijkstra
 
-__author__ = 'estensen'
 
 '''
 Find paths with

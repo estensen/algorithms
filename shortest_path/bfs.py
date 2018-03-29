@@ -1,8 +1,6 @@
 from queue import Queue
 from a_star import Node
 
-__author__ = 'estensen'
-
 
 def bfs(board, start, goal):
     """Return open nodes, closed nodes and path"""

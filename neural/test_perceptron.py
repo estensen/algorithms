@@ -1,8 +1,6 @@
 import unittest
 from perceptron import Perceptron
 
-__author__ = 'estensen'
-
 
 class TestActivate(unittest.TestCase):
 
