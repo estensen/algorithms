@@ -3,14 +3,18 @@ from node import Node
 class LinkedList(Node):
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def is_empty(self):
         return self.head == None
 
     def add(self, item):
         new_node = Node(item)
-        new_node.set_next(self.head)
-        self.head = new_node
+        if not self.head:
+            self.head = new_node
+        else:
+            self.tail.set_next(new_node)
+            self.tail = new_node
 
     def size(self):
         current_node = self.head
